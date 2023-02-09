@@ -1,11 +1,12 @@
 import React from "react";
-import LoginForm from "../components/loginForm";
+import LoginCard from "../components/loginCard";
+import Container from "react-bootstrap/Container";
 
 const Login = () => {
   return (
-    <div>
-      <LoginForm />
-    </div>
+    <Container className="display-flex">
+      <LoginCard />
+    </Container>
   );
 };
 
