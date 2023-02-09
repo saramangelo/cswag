@@ -1,9 +1,14 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import setNewUser from "./loginCard";
 
 function LoginForm() {
+  const handleSignUp = () => {
+    setNewUser(true);
+  };
+
   return (
     <Container>
       <h1>Login</h1>
@@ -22,7 +27,12 @@ function LoginForm() {
           <Button className="mr-1 mb-2" variant="primary" type="submit">
             Log in
           </Button>
-          <Button className="ml-1 mb-2" variant="primary" type="submit">
+          <Button
+            onClick={handleSignUp}
+            className="ml-1 mb-2"
+            variant="primary"
+            type="submit"
+          >
             Sign up
           </Button>
         </Container>
