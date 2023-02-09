@@ -36,9 +36,8 @@ export default class MenuExampleSecondaryPointing extends Component {
           </Menu.Menu>
         </Menu>
 
-        <Segment>
-          <img src='/images/wireframe/media-paragraph.png' />
-        </Segment>
+        {/* this is where we'll call Dashboard - to include table, button-to-modal to create new ticket, etc */}
+        
       </div>
     )
   }
