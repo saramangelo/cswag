@@ -1,12 +1,11 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
 
-function LoginForm() {
+function SignUpForm() {
   return (
     <Container>
-      <h1>Login</h1>
+      <h1>Sign Up</h1>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -18,17 +17,16 @@ function LoginForm() {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
-        <Container>
-          <Button className="mr-1 mb-2" variant="primary" type="submit">
-            Log in
-          </Button>
-          <Button className="ml-1 mb-2" variant="primary" type="submit">
-            Sign up
-          </Button>
-        </Container>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Confirm Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Sign up
+        </Button>
       </Form>
     </Container>
   );
 }
 
-export default LoginForm;
+export default SignUpForm;
