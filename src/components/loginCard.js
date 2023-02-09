@@ -5,16 +5,13 @@ import SignUpForm from "./signUpForm";
 
 function LoginCard() {
   const [newUser, setNewUser] = useState(false);
-  if (newUser) {
-    return (
-      <Card>
-        <SignUpForm />
-      </Card>
-    );
-  }
   return (
-    <Card>
-      <LoginForm />
+    <Card className="mt-5">
+      {newUser ? (
+        <SignUpForm setUser={setNewUser} />
+      ) : (
+        <LoginForm setUser={setNewUser} />
+      )}
     </Card>
   );
 }

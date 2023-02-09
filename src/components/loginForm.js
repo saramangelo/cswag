@@ -4,9 +4,9 @@ import Container from "react-bootstrap/Container";
 import { useState } from "react";
 import setNewUser from "./loginCard";
 
-function LoginForm() {
+function LoginForm({ setUser }) {
   const handleSignUp = () => {
-    setNewUser(true);
+    setUser(true);
   };
 
   return (
@@ -29,7 +29,7 @@ function LoginForm() {
           </Button>
           <Button
             onClick={handleSignUp}
-            className="ml-1 mb-2"
+            className="mb-2"
             variant="primary"
             type="submit"
           >

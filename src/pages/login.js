@@ -4,14 +4,12 @@ import Container from "react-bootstrap/Container";
 import background from "../images/BackgroundLog.jpg";
 
 const Login = () => {
-  const newUser = true;
-
   return (
     <div
       className="mt-0 min-100-vh cover"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <Container className="display-flex mt-5 ml-5">
+      <Container className="display-flex">
         <LoginCard />
       </Container>
     </div>

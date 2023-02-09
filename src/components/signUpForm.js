@@ -2,7 +2,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 
-function SignUpForm() {
+function SignUpForm({ setUser }) {
+  const handleSignUp = () => {
+    setUser(false);
+  };
   return (
     <Container>
       <h1>Sign Up</h1>
@@ -21,8 +24,16 @@ function SignUpForm() {
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="mb-2 mr-1" variant="primary" type="submit">
           Sign up
+        </Button>
+        <Button
+          className="mb-2"
+          onClick={handleSignUp}
+          variant="primary"
+          type="submit"
+        >
+          Login instead
         </Button>
       </Form>
     </Container>
